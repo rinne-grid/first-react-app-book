@@ -1,10 +1,13 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from 'react';
+import './App.css';
+import SearchForm from './components/SearchForm';
 
 function App() {
+  const [keyword, setKeyword] = useState('');
+
   return (
     <div className="App">
-      <div></div>
+      <SearchForm setKeyword={setKeyword} keyword={keyword} />
     </div>
   );
 }
